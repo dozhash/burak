@@ -36,4 +36,17 @@ Dars Rejasi:
 
 
 5. So'ngi so'z: Bu darsda TypeScriptga oid dynamic type turlari hamda type larni yasashda yordamga keladigan interface tushunchalari o'rganildi.
+
+
+<------------------------------------------------------ Architectural Patterns va Design Patterns ---------------------------------------------------------->
+--> Har qanday frontend yoki backend malum bit patternlar asosida quriladi
+
+--> Architectural Patterns: MVC (Model View Controller), Dependency Injection, MVP
+        - Bu biznig backendimizni suyagi, yani backenddagi malumotlar oqimini tartibga soladigan bir vosita hisoblanadi.
+        - MISOL: bu patternni butun bir insonning suyagi deb bilsak boladi. (To'liq inson suyagi)
+
+--> Design Patterns: Middleware, Decorator
+        - Bu esa butun bir backend tizimini tartibga soluvchi vositachi sifatida emas, balkim malum bir bo'laklarini 
+          structurasini yechishda hizmat qiladigan patternlar hisoblanadi
+        - MISOL: bu esa butun bir inson qo'lining suyagi ga oxshatilsa boladi. (Insonning malum bir funcsiyasini bajaruvchi bolim, qismi)
 */
