@@ -6,6 +6,7 @@ Dars Rejasi:
     3. Typescript dynamic typing va interfacelar tushunchasi
     4. Burak backend loyihamizni typescripda quramiz
     5. Patternlarni o'rganamiz va architecture va dizayn patternlarga tuxtalib o'tamiz
+    
 
 1. Compiled Languages: Java, Golang, C, C++, C#, Rust       =>      Compiling & Running
     --> Compiled tillarda dastlab hamma code computer tiliga ogirilib keyin run boladi. 
