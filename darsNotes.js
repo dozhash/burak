@@ -19,6 +19,7 @@ Dars Rejasi:
 
 3. TypeScript O'zi Nima?
     --> Aynan compiled languages da mavjud bolgan static type larga oxshash dynamic type larni NodeJS ga olib kirgan.
+        * Dynamic type integration ni hosil qilib bergan instrument hisoblanadi.
         Qisqa qilib aytganda, bu NodeJS ga type tushunchasini olib kirgan
 
     --> Formula: TypeScript = JavaScript + Typescript unsurlari (o'ziga tegishli bolgan elementlari va componentlari) dan iborat.
