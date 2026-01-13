@@ -51,4 +51,79 @@ Dars Rejasi:
         - Bu esa butun bir backend tizimini tartibga soluvchi vositachi sifatida emas, balkim malum bir bo'laklarini 
           structurasini yechishda hizmat qiladigan patternlar hisoblanadi
         - MISOL: bu esa butun bir inson qo'lining suyagi ga oxshatilsa boladi. (Insonning malum bir funcsiyasini bajaruvchi bolim, qismi)
+
+
+
+<-------------------------------------------- Burak Project Creation Process ------------------------------------------------>
+
+
 */
+
+console.log(
+  "----------------------------> Welcome to the Dars page <----------------------------"
+);
+
+// // TypeScript Primitive types:
+
+let box: string;
+box = "Hello";
+// box = 100; // gives an error
+console.log(box);
+
+let counter: number = 100;
+// counter = "dd" // gives an error
+console.log(counter);
+
+// // Birdan ortiq qiymat oladigan holat: ham number ni ham string ni oladigan example:
+let stage: number | string = "Jacob";
+// stage = 23; // no error
+console.log(stage);
+
+let pending: boolean = true;
+pending = false;
+// pending = "value"; // gives an error
+console.log(pending);
+
+// // TypeScript Object types:
+// interface - shunchaki bir type uchun hizmat qiladi
+interface Person {
+  name: string;
+  age: number;
+  nationality: string;
+}
+
+const person: Person = {
+  name: "Jacob",
+  age: 23,
+  nationality: "Uzbek",
+};
+
+// 2-usuli:
+const employee: {
+  name: string;
+  age: number;
+  nationality: string;
+} = {
+  name: "Jacob",
+  age: 23,
+  nationality: "Uzbek",
+};
+
+// // TypeScript Array types:
+let skills: (string | number)[];
+// let skills: string[];
+skills = ["Ali", "Vali", "Hasan", "Husan", 99];
+console.log(skills);
+
+// // TypeScript Class types:
+class Member {
+  age: number;
+  name: string;
+  surname: string;
+
+  constructor(age: number, name: string, surname: string) {
+    this.age = age;
+    this.name = name;
+    this.surname = surname;
+  }
+}
