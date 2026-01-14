@@ -46,8 +46,11 @@ Dars Rejasi:
 
 Dars Rejasi:
     1. MongoDBga Mongoose orqali ulanamiz
-    2. Loyihamizga Express ni o'rnatamiz
-
+    2. Loyihamizga Express ni o'rnatamiz 
+        => app.ts file orqali hosil qilamiz
+        => Installed: npm i express@4.17.3
+                      npm i @types/express@4.17.3 -D
+                      npm i ejs@3.1.6
 
 --> mongoose ni organamiz
     Bu Nima: Mongoose bu MongoDB bilan ishlash uchun hosil qilingan maxsus package hisoblanadi.
