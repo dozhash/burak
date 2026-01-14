@@ -55,12 +55,16 @@ Dars Rejasi:
 
 
 <-------------------------------------------- Burak Project Creation Process ------------------------------------------------>
+--> Terminal commands: 1. git init (loyihamizni initiate qilamiz)
+                       2. npm i typescript -D [5.2.2]
+                       3. npm i ts-node -D [10.9.1] (TypeScriptni ishga tushurib beradigan externel package)
+                       4. npm i tsconfig-paths -D [4.2.0]
 
 
 */
 
 console.log(
-  "----------------------------> Welcome to the Dars page <----------------------------"
+  "----------------------------> Welcome to the 35 Class <----------------------------"
 );
 
 // // TypeScript Primitive types:
