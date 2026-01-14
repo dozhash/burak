@@ -1,9 +1,9 @@
-console.log("EXECUTED");
+import dotenv from "dotenv"; // .env faylini o'qish uchun maxsus package
 
-import moment from "moment";
+dotenv.config(); // .env faylini yuklash:
 
-const currentTime = moment().format("YYYY MM DD");
-console.log("Current date:", currentTime);
+// console.log("After:", process.env);
 
-const person: string = "Jacob";
-const count: number = 1000;
+console.log("PORT:", process.env.PORT);
+
+console.log("MONGO_URL:", process.env.MONGO_URL);
