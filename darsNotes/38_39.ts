@@ -33,4 +33,13 @@ Lesson Flow:
 
 => ESLATMA: controllerlarni doim Object orqali hozil qilamiz
 
+
+4. Commit dan so'ng:
+
+Burak backend loyihamizni ozi nima uchun ishlatyabmiz?
+
+Maqsadlar: 1. SPA bolmish burakni userlar uchun xizmat qiladigan React loyihamiz uchun REST API server sifatida ishlatamiz
+           2. Backend loyihamizni adminka uchun => BSSR ejs dan foydalanib
+         
+
 */
