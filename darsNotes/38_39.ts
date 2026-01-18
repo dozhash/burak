@@ -40,6 +40,25 @@ Burak backend loyihamizni ozi nima uchun ishlatyabmiz?
 
 Maqsadlar: 1. SPA bolmish burakni userlar uchun xizmat qiladigan React loyihamiz uchun REST API server sifatida ishlatamiz
            2. Backend loyihamizni adminka uchun => BSSR ejs dan foydalanib
-         
+*/
+
+/* 39. Member - Schema Model
+
+Dars Rejasi:
+    1. Member Service Model aqida gaplashamiz
+    2. Mongoose documentationidan Schema, Model, va Query tushunchalarini o'rganamiz
+    3. Schema Member Model hosil qilamiz
+
+Lesson Flow:
+    1. models folderida Member.service.ts file ochildi
+
+    ESLATMA: 1. biz service modellarimizni ham schema modellarimizni ham doim class lar orqali quramiz
+             2. Mongoose da eng markaziy tushuncha Schema hisoblanadi
+             3. Moongose ni eng yaxshi xislati Chained Query amaliyotini ozida joriy qilgan
+
+
+
+
+
 
 */
