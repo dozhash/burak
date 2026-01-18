@@ -61,10 +61,5 @@ Lesson Flow:
     ESLATMA: 1. Schemalarni 2 xil usulda qursa boladi => 1) Schema first methodi (biz foydalanadigan usul)
                                                          2) Code First methodi orqali
 
-
-
-
-
-
-
+    3. libs folder da enums folderi ochildi
 */
