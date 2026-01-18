@@ -56,6 +56,12 @@ Lesson Flow:
              2. Mongoose da eng markaziy tushuncha Schema hisoblanadi
              3. Moongose ni eng yaxshi xislati Chained Query amaliyotini ozida joriy qilgan
 
+    2. Member Service Model ichida ishlidigan Schema modelni quramiz
+
+    ESLATMA: 1. Schemalarni 2 xil usulda qursa boladi => 1) Schema first methodi (biz foydalanadigan usul)
+                                                         2) Code First methodi orqali
+
+
 
 
 
