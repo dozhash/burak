@@ -7,7 +7,8 @@ Dars Rejasi:
 ESLATMA: MemberService -> member controllerga ham restaran controllerga ham birdek xizmat qiladi
          MemberService modelda Member Schema model ishlatiladi.
 
-Loyihamizning Standartlari -> developing jarayonini biz uchun yengillashtiradi,
+1-BO'LIM:
+--> Loyihamizning Standartlari -> developing jarayonini biz uchun yengillashtiradi,
                               hamda jamoada birga ishlashimiz uchun muhum vositachi hisoblanadi.
 
     Bunga Misol qilib: 1. logging mehanizmi => console.log("goHoe") kabi bizga kelayotgan request holatini koramiz
@@ -27,6 +28,17 @@ Loyihamizning Standartlari -> developing jarayonini biz uchun yengillashtiradi,
     
     - Error Handling => loyihamizda sodir boladigan turli errorlarni handle qilish mehanizmi tushuniladi
 
+2-BO'LIM:
+--> request larimizning methodlari haqida:
+                            post metodli requestlarni ko'rib chiqamiz:
+
+ESLATMA: Browser by default faqat bitta methodga hizmat qiladi: get()
+
+get() maqsadi --> shunchaki bizga bir page (malumot) ni chiqarib berishda ishlatiladi
+post() maqsadi --> malumotni o'zgartirishda (mutation) ishlatiladi
+                   => bu method ni test qilishda POSTMAN ishlatiladi
+
+--> Response Turlari: send | json | redirect | end | render
 
 
 */
