@@ -1,29 +1,51 @@
 console.log("---------> Welcome to the Training Page! <---------");
 
+/** J-TASK
+  Shunday function yozing, u string qabul qilsin va string ichidagi eng uzun sozni qaytarsin.
+  MASALAN: findLongestWord("I come from Uzbekistan") return "Uzbekistan".
+*/
+
+function findLongestWord(userInput: string): string {
+  const userInputArr: string[] = userInput.split(" ");
+
+  let longestWord: string = userInputArr[0];
+
+  for (let i = 1; i < userInputArr.length; i++) {
+    if (userInputArr[i].length > longestWord.length) {
+      longestWord = userInputArr[i];
+    }
+  }
+
+  return longestWord;
+}
+
+const result: string = findLongestWord("I come from Uzbekistan");
+console.log(result);
+
 /* I-TASK
   Shunday function yozing, u parametridagi array ichida eng kop takrorlangan raqamni topib qaytarsin. 
   MASALAN: majorityElement([1,2,3,4,5,4,3,4]) return 4.
 */
 
-function majorityElement(numList: number[]): number {
-  const count: { [key: number]: number } = {};
-  let maxCount = 0;
-  let maxRepeatedVal = numList[0];
+// function majorityElement(numList: number[]): number {
+//   const count: { [key: number]: number } = {};
+//   let maxCount = 0;
+//   let maxRepeatedVal = numList[0];
 
-  for (let num of numList) {
-    count[num] = (count[num] || 0) + 1;
+//   for (let num of numList) {
+//     count[num] = (count[num] || 0) + 1;
 
-    if (count[num] > maxCount) {
-      maxCount = count[num];
-      maxRepeatedVal = num;
-    }
-  }
+//     if (count[num] > maxCount) {
+//       maxCount = count[num];
+//       maxRepeatedVal = num;
+//     }
+//   }
 
-  return maxRepeatedVal;
-}
+//   return maxRepeatedVal;
+// }
 
-const result: number = majorityElement([1, 2, 3, 4, 5, 4, 3, 4]);
-console.log(result);
+// const result: number = majorityElement([1, 2, 3, 4, 5, 4, 3, 4]);
+// console.log(result);
 
 /* H-TASK
     Shunday function tuzing, u integerlardan iborat arrayni argument sifatida qabul qilib, 
