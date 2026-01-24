@@ -1,7 +1,7 @@
 import { Request, Response } from "express";
 import { T } from "../libs/types/common";
 import MemberService from "../models//Member.service";
-import { MemberInput } from "../libs/types/member";
+import { LoginInput, MemberInput } from "../libs/types/member";
 import { MemberType } from "../libs/enums/member.enum";
 
 const restaurantController: T = {};
@@ -37,29 +37,47 @@ restaurantController.getSignup = (req: Request, res: Response) => {
   }
 };
 
-restaurantController.processLogin = (req: Request, res: Response) => {
+restaurantController.processLogin = async (req: Request, res: Response) => {
   try {
     console.log("processLogin");
-    res.send("DONE");
+    console.log("body:", req.body);
+    const input: LoginInput = req.body;
+
+    const memberService = new MemberService();
+    const result = await memberService.processLogin(input);
+
+    res.send(result);
   } catch (err) {
-    console.log("Error, processLogin", err);
+    console.log("Error, processLogin:", err);
+    res.send(err);
   }
 };
 
 restaurantController.processSignup = async (req: Request, res: Response) => {
   try {
-    console.log("processSignup ");
+    console.log("Controller: processSignup\n");
 
     const newMember: MemberInput = req.body;
+    console.log("Member Initial Input:", newMember);
+
     newMember.memberType = MemberType.RESTAURANT;
+    console.log("Restaurant Type Member Data:", newMember);
 
     const memberService = new MemberService();
+
+    // Controller ishni tugatdi va Business logic Service’ga o‘tdi (argument)
     const result = await memberService.processSignup(newMember);
 
-    res.send(result);
-  } catch (err) {
+    console.log("Response to client:", result);
+
+    // Nega o'zi biza client ga qaytarib Natijani qaytaryabmiz u succces bo'lsa ham
+    // res.send(result);
+  } catch (err: any) {
     console.log("Error, processSignup ", err);
     res.send(err);
+
+    // console.log("Error, processSignup", err);
+    // res.status(err.code || 500).send(err);
   }
 };
 

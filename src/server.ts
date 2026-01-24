@@ -1,5 +1,5 @@
 import dotenv from "dotenv"; // .env faylini o'qish uchun maxsus package
-dotenv.config(); // .env faylini yuklash:
+dotenv.config(); // .env faylini Node.js ga yuklash:
 
 // console.log("process.env", process.env);
 // console.log("PORT:", process.env.PORT);
@@ -14,7 +14,7 @@ mongoose
     console.log("MongoDB connection succeed!");
     const PORT = process.env.PORT ?? 3003;
     app.listen(PORT, function () {
-      console.log(`The server is running successfully on port: ${PORT}`);
+      console.log(`The server is running successfully on port: ${PORT}\n`);
     });
   })
   .catch((err) => console.log("ERROR on connection MongoDB", err));

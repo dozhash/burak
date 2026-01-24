@@ -7,11 +7,17 @@ import { MORGAN_FORMAT } from "./libs/config";
 
 /** 1-ENTRANCE **/
 const app = express();
-// console.log("__dirname:", __dirname);
 app.use(express.static(path.join(__dirname, "public")));
 app.use(express.urlencoded({ extended: true }));
 app.use(express.json());
+// request kirganini log qilayabdi
 app.use(morgan(MORGAN_FORMAT));
+
+// yasamasi:
+// app.use((req, res, next) => {
+//   console.log("➡️ Incoming request:", req.method, req.originalUrl);
+//   next();
+// });
 
 /** 2-SESSIONS **/
 

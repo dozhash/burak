@@ -71,7 +71,7 @@ API REQUESTS:
 
 Postman qanday ishlayabdi:  Postman
                                 ↓ (HTTP request)
-                            http://localhost:3000/login
+                            http://localhost:3000/admin
                                 ↓
                             Node + Express (server)
                                 ↓

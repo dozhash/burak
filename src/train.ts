@@ -6,9 +6,9 @@ console.log("---------> Welcome to the Training Page! <---------");
 */
 
 function findLongestWord(userInput: string): string {
-  const userInputArr: string[] = userInput.split(" ");
+  const userInputArr = userInput.split(" ");
 
-  let longestWord: string = userInputArr[0];
+  let longestWord = userInputArr[0];
 
   for (let i = 1; i < userInputArr.length; i++) {
     if (userInputArr[i].length > longestWord.length) {
