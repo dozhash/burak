@@ -71,7 +71,7 @@ restaurantController.processSignup = async (req: Request, res: Response) => {
     console.log("Response to client:", result);
 
     // Nega o'zi biza client ga qaytarib Natijani qaytaryabmiz u succces bo'lsa ham
-    // res.send(result);
+    res.send(result);
   } catch (err: any) {
     console.log("Error, processSignup ", err);
     res.send(err);
