@@ -1,26 +1,47 @@
 console.log("---------> Welcome to the Training Page! <---------");
 
+/* K-TASK
+  Shunday function yozing, u string qabul qilsin va string ichidagi unli harflar sonini qaytarsin. 
+  MASALAN: countVowels("string") return 1.
+*/
+
+function countVowels(userInput: string): number {
+  const vowelsList: string[] = ["a", "e", "i", "o", "u"];
+  let counter = 0;
+
+  for (const char of userInput) {
+    let lowerCaseLetter = char.toLowerCase();
+
+    if (vowelsList.includes(lowerCaseLetter)) counter++;
+  }
+
+  return counter;
+}
+
+const result = countVowels("string");
+console.log(result);
+
 /** J-TASK
   Shunday function yozing, u string qabul qilsin va string ichidagi eng uzun sozni qaytarsin.
   MASALAN: findLongestWord("I come from Uzbekistan") return "Uzbekistan".
 */
 
-function findLongestWord(userInput: string): string {
-  const userInputArr = userInput.split(" ");
+// function findLongestWord(userInput: string): string {
+//   const userInputArr = userInput.split(" ");
 
-  let longestWord = userInputArr[0];
+//   let longestWord = userInputArr[0];
 
-  for (let i = 1; i < userInputArr.length; i++) {
-    if (userInputArr[i].length > longestWord.length) {
-      longestWord = userInputArr[i];
-    }
-  }
+//   for (let i = 1; i < userInputArr.length; i++) {
+//     if (userInputArr[i].length > longestWord.length) {
+//       longestWord = userInputArr[i];
+//     }
+//   }
 
-  return longestWord;
-}
+//   return longestWord;
+// }
 
-const result: string = findLongestWord("I come from Uzbekistan");
-console.log(result);
+// const result: string = findLongestWord("I come from Uzbekistan");
+// console.log(result);
 
 /* I-TASK
   Shunday function yozing, u parametridagi array ichida eng kop takrorlangan raqamni topib qaytarsin. 
