@@ -1,25 +1,44 @@
 console.log("---------> Welcome to the Training Page! <---------");
 
+/* L-TASK
+  Shunday function yozing, u string qabul qilsin va string ichidagi hamma sozlarni 
+  chappasiga yozib va sozlar ketma-ketligini buzmasdan stringni qaytarsin. 
+  MASALAN: reverseSentence("we like coding!") return "ew ekil gnidoc".
+*/
+
+function reverseSentence(userInput: string): string {
+  const inputArr = userInput.split(" ");
+
+  for (let i = 0; i < inputArr.length; i++) {
+    inputArr[i] = inputArr[i].split("").reverse().join("");
+  }
+
+  return inputArr.join(" ");
+}
+
+const result: string = reverseSentence("We like coding");
+console.log(result);
+
 /* K-TASK
   Shunday function yozing, u string qabul qilsin va string ichidagi unli harflar sonini qaytarsin. 
   MASALAN: countVowels("string") return 1.
 */
 
-function countVowels(userInput: string): number {
-  const vowelsList: string[] = ["a", "e", "i", "o", "u"];
-  let counter = 0;
+// function countVowels(userInput: string): number {
+//   const vowelsList: string[] = ["a", "e", "i", "o", "u"];
+//   let counter = 0;
 
-  for (const char of userInput) {
-    let lowerCaseLetter = char.toLowerCase();
+//   for (const char of userInput) {
+//     let lowerCaseLetter = char.toLowerCase();
 
-    if (vowelsList.includes(lowerCaseLetter)) counter++;
-  }
+//     if (vowelsList.includes(lowerCaseLetter)) counter++;
+//   }
 
-  return counter;
-}
+//   return counter;
+// }
 
-const result = countVowels("string");
-console.log(result);
+// const result = countVowels("string");
+// console.log(result);
 
 /** J-TASK
   Shunday function yozing, u string qabul qilsin va string ichidagi eng uzun sozni qaytarsin.
