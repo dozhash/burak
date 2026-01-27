@@ -4,6 +4,8 @@ import MemberService from "../models//Member.service";
 import { LoginInput, MemberInput } from "../libs/types/member";
 import { MemberType } from "../libs/enums/member.enum";
 
+const memberService = new MemberService();
+
 const restaurantController: T = {};
 
 restaurantController.goHome = (req: Request, res: Response) => {
@@ -17,16 +19,6 @@ restaurantController.goHome = (req: Request, res: Response) => {
   }
 };
 
-restaurantController.getLogin = (req: Request, res: Response) => {
-  try {
-    console.log("getLogin");
-
-    res.send("Login Page");
-  } catch (err) {
-    console.log("Error, getLogin", err);
-  }
-};
-
 restaurantController.getSignup = (req: Request, res: Response) => {
   try {
     console.log("getSignup");
@@ -37,19 +29,13 @@ restaurantController.getSignup = (req: Request, res: Response) => {
   }
 };
 
-restaurantController.processLogin = async (req: Request, res: Response) => {
+restaurantController.getLogin = (req: Request, res: Response) => {
   try {
-    console.log("processLogin");
-    console.log("body:", req.body);
-    const input: LoginInput = req.body;
+    console.log("getLogin");
 
-    const memberService = new MemberService();
-    const result = await memberService.processLogin(input);
-
-    res.send(`Hi ${result.memberNick}! Welcome back!`);
+    res.send("Login Page");
   } catch (err) {
-    console.log("Error, processLogin:", err);
-    res.send(err);
+    console.log("Error, getLogin", err);
   }
 };
 
@@ -63,14 +49,10 @@ restaurantController.processSignup = async (req: Request, res: Response) => {
     newMember.memberType = MemberType.RESTAURANT;
     console.log("Restaurant Type Member Data:", newMember);
 
-    const memberService = new MemberService();
-
     // Controller ishni tugatdi va Business logic Service’ga o‘tdi (argument)
     const result = await memberService.processSignup(newMember);
+    //TODO: SESSIONS AUTHENTICATION
 
-    console.log("Response to client:", result);
-
-    // Nega o'zi biza client ga qaytarib Natijani qaytaryabmiz u succces bo'lsa ham
     res.send(result);
   } catch (err: any) {
     console.log("Error, processSignup ", err);
@@ -78,6 +60,21 @@ restaurantController.processSignup = async (req: Request, res: Response) => {
 
     // console.log("Error, processSignup", err);
     // res.status(err.code || 500).send(err);
+  }
+};
+
+restaurantController.processLogin = async (req: Request, res: Response) => {
+  try {
+    console.log("processLogin");
+    console.log("body:", req.body);
+    const input: LoginInput = req.body;
+    const result = await memberService.processLogin(input);
+    //TODO: SESSIONS AUTHENTICATION
+
+    res.send(result);
+  } catch (err) {
+    console.log("Error, processLogin:", err);
+    res.send(err);
   }
 };
 
