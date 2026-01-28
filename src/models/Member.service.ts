@@ -70,7 +70,6 @@ class MemberService {
     input.memberPassword = await bcrypt.hash(input.memberPassword, salt);
     console.log("After:", input.memberPassword);
 
-    // MongoDB ga malumotni qo'shish
     try {
       const result = await this.memberModel.create(input);
       console.log("DB Saved User Data:", result);
@@ -78,14 +77,6 @@ class MemberService {
 
       // const tempresult = new this.memberModel(input);
       // const result = await tempresult.save();
-
-      const existAfter = await this.memberModel
-        .findOne({
-          memberType: MemberType.RESTAURANT,
-        })
-        .exec();
-
-      console.log("Existing restaurant check (After Creation:):", existAfter);
 
       result.memberPassword = "";
 

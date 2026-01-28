@@ -56,9 +56,6 @@ restaurantController.processSignup = async (req: Request, res: Response) => {
   } catch (err: any) {
     console.log("Error, processSignup ", err);
     res.send(err);
-
-    // console.log("Error, processSignup", err);
-    // res.status(err.code || 500).send(err);
   }
 };
 
