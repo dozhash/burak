@@ -75,9 +75,6 @@ class MemberService {
       console.log("DB Saved User Data:", result);
       console.log("User PWD:", result.memberPassword);
 
-      // const tempresult = new this.memberModel(input);
-      // const result = await tempresult.save();
-
       result.memberPassword = "";
 
       return result;
